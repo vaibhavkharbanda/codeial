@@ -1,11 +1,29 @@
 const express= require('express');
 const app= express();
 const port =4000;
+const expressLayouts= require('express-ejs-layouts');
 
 
+//use express Layouts
+app.use(expressLayouts);
 
+
+//use static files
+app.use(express.static('./assets'));
+
+//use express routers
 app.use('/',require('./routes'));
-app.set('case sensitive routing','true');
+
+
+//extract style and scripts from sub pages into the layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true)
+
+
+
+app.set('case sensitive routing',false);
+
+//setup view engine
 app.set('view engine','ejs');
 app.set('views', './views');
 
