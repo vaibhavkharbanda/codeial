@@ -5,6 +5,10 @@ const port =4000;
 
 
 app.use('/',require('./routes'));
+app.set('case sensitive routing','true');
+app.set('view engine','ejs');
+app.set('views', './views');
+
 
 
 

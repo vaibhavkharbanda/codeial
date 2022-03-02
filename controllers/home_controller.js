@@ -1,7 +1,6 @@
 module.exports.home = function(req,res){
-    return res.end("<h1> vaibhav kharbanda</h1>");
+    return res.render('home',{
+        title:"Codeial Media"
+    });
 }
 
-module.exports.profile = function(req,res){
-    return res.end("<h1> vaibhav kharbanda profile</h1>");
-}
