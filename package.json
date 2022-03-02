@@ -1,0 +1,28 @@
+{
+  "name": "codeial",
+  "version": "1.0.0",
+  "description": "My all social media application",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhavkharbanda/codeial.git"
+  },
+  "keywords": [
+    "Social",
+    "Media",
+    "Platform"
+  ],
+  "author": "Vaibhav Kharbanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaibhavkharbanda/codeial/issues"
+  },
+  "homepage": "https://github.com/vaibhavkharbanda/codeial#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
