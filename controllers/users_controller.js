@@ -56,8 +56,8 @@ module.exports.create = function(req,res){
 
 // signing in for data and generate session
 module.exports.createSession = function(req,res){
-    //STEPS TO AUTHENTICATE
-    //ToDoLater
+    return res.redirect('/users/profile');
+
     
 }
 
