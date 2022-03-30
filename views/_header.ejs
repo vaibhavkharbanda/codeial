@@ -3,9 +3,16 @@
     <div id="navigationBar">
         <ul id="nav_list">
             <li class="nav-options"><a href="/">Home</a></li>
-            <li class="nav-options"><a href="/users/profile">My Profile</a></li>
-            <li class="nav-options"><a href="/users/sign-up">Create Account</a></li>
-            <li class="nav-options"><a href="/users/sign-in">Login</a></li>
+            <%if (locals.user){%>
+                <li class="nav-options"><a href="/users/profile">My Profile</a></li>
+                <li class="nav-options"><a href="/users/sign-out">Sign Out</a></li>
+
+            <%} else{ %>
+                <li class="nav-options"><a href="/users/sign-up">Create Account</a></li>
+                <li class="nav-options"><a href="/users/sign-in">Login</a></li>
+
+            <% } %>
+
         </ul>
     </div>   
 </header>

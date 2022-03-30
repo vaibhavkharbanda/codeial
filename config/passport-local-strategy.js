@@ -16,7 +16,7 @@ passport.use(new LocalStrategy({
                 return done(err);
             }
             if (!user || user.password != password) {
-                console.log('Invalid Username/Password');
+                console.log('Invalid Username/Password -->passport ');
                 return done(null, false);
 
             }
@@ -63,7 +63,8 @@ passport.checkAuthentication = function(req,res,next){
 passport.setAuthenticatedUser= function(req,res,next){
     if(req.isAuthenticated()){
         //req.user contains the current signed in user from the session cookie and we are just sending this to the locals from the views
-        res.local.user=req.user;
+        // console.log(res);
+        res.locals.user=req.user;
     }
     next();
 }

@@ -7,10 +7,12 @@ const userController = require('../controllers/users_controller');
 
 
 router.get('/',userController.home);
-router.get('/profile',passport.checkAuthentication ,userController.profile);
+router.get('/profile',passport.checkAuthentication,userController.profile);
 router.get('/sign-up',userController.signUp);
 router.get('/sign-in',userController.signIn);
+
 router.post('/create',userController.create);
+
 
 //user passport as a middleware to authenticate
 router.post('/create-session',passport.authenticate(
@@ -18,7 +20,7 @@ router.post('/create-session',passport.authenticate(
     {failureRedirect:'/users/sign-in'}
 ), userController.createSession);
 
-
+router.get('/sign-out',userController.destroySession);
 
 
 
