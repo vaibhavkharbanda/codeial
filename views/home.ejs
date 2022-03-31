@@ -1,3 +1,23 @@
-
+<link rel="stylesheet" href="/css/home.css">
     <h1>Codeial / <%= title%></h1>
     
+    <section id="post-container">
+        <div id="feed-posts"><h2>Posts</h2>
+        <form action="/posts/create" id="new-post-form" method="post">
+            <textarea name="content" id="post-content" cols="30" rows="3" placeholder="Type Here..."></textarea>
+            <input type="submit" value="post">
+        </form>
+    </div>
+    <div id="display-posts">
+        <h2>Posts Display</h2>
+        <ul id="posts-list">
+            <% for(post of posts){ %>
+            <li class="posts">
+                <%= post.content %> By <small><%=post.user.name%></small>
+            </li>
+
+            <%}%>
+        </ul>
+    </div>
+    </section>
+   

@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  justify-content: space-around;
+}
+
+section #feed-posts {
+  width: 50%;
+  background-color: lightblue;
+}
+
+section #display-posts {
+  width: 50%;
+  background-color: cyan;
+}

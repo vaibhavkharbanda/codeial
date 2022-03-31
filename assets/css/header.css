@@ -6,19 +6,29 @@ header {
   position: sticky;
 }
 
-#nav_list {
+header #nav_list {
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.nav-options {
+header #nav_list div {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+header #nav_list #home-div {
+  justify-content: start;
+}
+
+header #nav_list .nav-options {
   font-size: 1.5rem;
   padding: 2.2%;
   list-style: none;
 }
 
-.nav-options a {
+header #nav_list .nav-options a {
   text-decoration: none;
   color: white;
 }
