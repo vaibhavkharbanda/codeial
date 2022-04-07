@@ -5,7 +5,7 @@
             <div id="home-div"> <li class="nav-options"><a href="/">Home</a></li> </div>
            
             <%if (locals.user){%>
-               <div> <li class="nav-options"><a href="/users/profile"><%= user.name %></a></li>
+               <div> <li class="nav-options"><a href="/users/profile/<%= user.id %>"><%= user.name %></a></li>
                 <li class="nav-options"><a href="/users/sign-out">Sign Out</a></li></div>
 
             <%} else{ %>
@@ -13,6 +13,7 @@
                 <li class="nav-options"><a href="/users/sign-in">Login</a></li></div>
 
             <% } %>
+            
 
         </ul>
     </div>   
